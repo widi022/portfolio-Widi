@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Mail, Send } from "lucide-react";
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/button";
 import MessageStatus from "@/components/MessageStatus";
@@ -29,7 +29,7 @@ export default function HeroSection() {
     event.preventDefault();
 
     try {
-      // Replace this with the email/API request when the contact backend is ready.
+      // maaf coach tidak ada API nya
       await Promise.resolve();
       setSubmitStatus("success");
     } catch {
@@ -47,6 +47,7 @@ export default function HeroSection() {
 
   return (
     <Section
+      id="home"
       background="hero"
       className="min-h-screen px-5 pb-14 sm:px-6 sm:pb-16 lg:px-8 lg:pb-0 xl:px-0"
     >
@@ -154,7 +155,7 @@ export default function HeroSection() {
           </Dialog>
         </div>
 
-        <div className="relative order-1 flex h-[690px] items-start justify-center sm:h-[720px] md:order-2 md:h-auto lg:absolute lg:right-[calc((100vw-100%)/-2)] lg:top-0">
+        <div className="relative order-1 flex h-[690px] items-start justify-center sm:h-[720px] md:order-2 md:h-auto md:pr-6 lg:absolute lg:right-[calc((100vw-100%)/-2+1.5rem)] lg:top-0 lg:pr-0 xl:right-[calc((100vw-100%)/-2+2rem)]">
           <Image
             src="/images/hero.png"
             alt="Portrait of Edwin Anderson"
